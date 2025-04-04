@@ -80,7 +80,7 @@ function PageResult(props: SectionProps<typeof loader>) {
   });
   const infinite = layout?.pagination !== "pagination";
   return (
-    <div class="grid grid-flow-row grid-cols-1 place-items-center lg:px-[30px] lg:mt-[60px]">
+    <div class="grid grid-flow-row grid-cols-1 place-items-center lg:px-[30px]">
       <div
         class={clx(
           "pb-2 sm:pb-10",

@@ -129,7 +129,7 @@ function Filters({ filters }: Props) {
         .filter(isToggle)
         .map((filter) => (
           <li class="dropdown flex flex-col min-w-[100px] relative h-[48px] justify-center">
-            <input type="button" id={`filter-${filter.key}`} class=" hidden" name="filter"/>
+            {/* <input type="button" id={`filter-${filter.key}`} class=" hidden" name="filter"/> */}
             
             <label 
               tabindex="0" role="button"
@@ -151,7 +151,7 @@ function Filters({ filters }: Props) {
                 />
               </svg>
             </label>
-            <div tabindex="0" class="dropdown-content overflow-hidden transition-all duration-200 absolute left-0 top-[100%] max-h-[200px] w-[180px] mt-1 shadow bg-[#fffdf4] ">
+            <div tabindex="0" class="dropdown-content z-20 overflow-hidden transition-all duration-200 absolute left-0 top-[100%] max-h-[200px] w-[180px] mt-1 shadow bg-[#fffdf4] ">
               <div class="p-[10px] overflow-y-auto">
                 <FilterValues {...filter} />
               </div>

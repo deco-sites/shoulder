@@ -32,11 +32,11 @@ function Sort({ sortOptions, url }: Props) {
   }));
 
   return (
-    <div class="relative h-[48px] min-w-[180px] flex items-center justify-center">
-      <input type="radio" id="sort-dropdown" class="peer hidden" name="filter"/>
+    <div class="dropdown relative h-[48px] min-w-[180px] flex items-center justify-center">
       <label 
-        for="sort-dropdown"
-        class="flex items-center justify-between py-0 lg:py-2 cursor-pointer h-full max-w-[104px]"
+        role="button"
+        tabindex="0"
+        class="peer group flex items-center justify-between py-0 lg:py-2 cursor-pointer h-full max-w-[104px]"
       >
         <span class="text-sm font-medium text-[#2F3333] lowercase">
           {labels[options.find(opt => opt.value === current)?.label ?? ""] ?? "Ordenar por"}
@@ -55,7 +55,7 @@ function Sort({ sortOptions, url }: Props) {
           />
         </svg>
       </label>
-      <div class="h-0 peer-checked:h-auto overflow-hidden transition-all duration-200 absolute left-0 top-[100%] w-[180px] mt-1 shadow bg-[#fffdf4] z-10">
+      <div tabindex="0" class="dropdown-content overflow-hidden transition-all duration-200 absolute left-0 top-[100%] max-h-[200px] w-[180px] mt-1 shadow bg-[#fffdf4] ">
         <div class="p-[10px] overflow-y-auto">
           <ul class="flex flex-col gap-2">
             {options.map(({ value, label }) => (
